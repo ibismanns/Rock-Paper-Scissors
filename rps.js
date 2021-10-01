@@ -1,8 +1,4 @@
-const handOptions = {
-    "rock": "/images/icon-rock.svg",
-    "paper": "/images/icon-paper.svg",
-    "scissors": "/images/icon-scissors.svg"
-}
+
 
 let SCORE = 0;
 
@@ -14,7 +10,7 @@ const chooseUserHand = (hand) => {
     let result = document.querySelector(".result");
     result.style.display="flex";
 
-    document.getElementById("userpickimage").src = handOptions[hand]
+    document.getElementById("userpickimage").src = "./images/icon-" + hand + ".svg";
 
     chooseComputerHand(hand);
 
@@ -24,7 +20,7 @@ const chooseComputerHand = (hand) => {
     let play = ["rock", "paper", "scissors"];
     let computerhand = play[Math.floor(Math.random() * play.length)];
 
-    document.getElementById("housepickimage").src = handOptions[computerhand];
+    document.getElementById("housepickimage").src = "./images/icon-" + hand + ".svg";
    
     status(hand, computerhand);
 };

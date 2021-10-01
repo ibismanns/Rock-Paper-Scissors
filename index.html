@@ -24,38 +24,23 @@
     </div>
   </div>
     <div class="play">
-      <div class="hand paper" onclick="chooseUserHand('paper')">
+      <div class="hand paper" id="paper" onclick="chooseUserHand('paper')">
         <img src="images/icon-paper.svg" height="80px" >
       </div>
-      <div class="hand scissors" onclick="chooseUserHand('scissors')">
+      <div class="hand scissors" id="scissors" onclick="chooseUserHand('scissors')">
         <img src="images/icon-scissors.svg" height="80px" >
       </div>
-      <div class="hand rock" onclick="chooseUserHand('rock')">
+      <div class="hand rock" id="rock" onclick="chooseUserHand('rock')">
         <img src="images/icon-rock.svg" height="60px" >
       </div>
     </div>
 
-    <div class="choices">
-<div class= "userchoice">
-  <h1> YOU PICKED</h1> 
-  <div class="handimagecontainer" id="userchoiceimage">
-    <img src="images/icon-paper.svg" >
-</div>
-    </div>
-
-    <div class= "housechoice">
-      <h1> THE HOUSE PICKED</h1> 
-      <div class="handimagecontainer" id="housechoiceimage">
-        <img src="images/icon-paper.svg" >
-    </div>
-        </div>
-  </div>
 
     <div class="result">
       <div class="UserPick">
        <h1> YOU PICKED</h1> 
-       <div class="handimagecontainer" id="userpickimage">
-         <img src="images/icon-paper.svg" >
+       <div class="handimagecontainer" >
+         <img src=""id="userpickimage"/>
        </div>
       </div>
        <div class="status">
@@ -64,9 +49,9 @@
        </div>
       <div class="housePick">
         <h1>THE HOUSE PICKED</h1> 
-        <div class="handimagecontainer" id="housepickimage">
+        <div class="handimagecontainer" >
           
-          <img src="images/icon-paper.svg" >
+          <img src="" id="housepickimage"/>
        </div>
     </div>
   

@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -144,7 +145,7 @@ height: 300px;
 width: 300px;
 background: white;
 border-radius: 100%;
-border: 37.5px solid purple;
+border: 37.5px solid;
 }
 
 .status{
@@ -222,56 +223,234 @@ right:50px;
     margin: 30px;
 }
 
-.choices{
-    width: 900px;
-    margin-top: 50px;
-}
 
-.userchoice{
-    display: none;
-}
 
-.housechoice{
-    display: none;
-}
+@media only screen and (max-width: 375px) {
+    body{
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    }
+    
+    .game{
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    }
+    
+    .header{
+        width: 310px;
+        border: solid hsl(217, 16%, 45%) 2px;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 95px;
+        display: flex;
+        justify-content: space-between;
+    align-items: center;
+    }
+    
+    .logo{
+        margin-left: 20px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
 
-.choices img{
+    .logo img{
+       height: 50px; 
+       width: 85px;
+    }
+    
+    .counter{
+        width: 80px;
+        height: 70px;
+        background: white;
+       border-radius: 7px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .counter p{
+        color: hsl(229, 64%, 46%);
+        letter-spacing: 2px;
+        font-weight: 600;
+        line-height: 17px;
+        font-size: 8px;
+    }
+    
+    .counter h1{
+        font-size: 30px;
+      color:   hsl(229, 25%, 31%);
+    }
+    
+    .play .paper{
+         height: 130px;
+         width: 130px;
+        background: white;
+        border-radius: 100%;
+    border: solid 17px hsl(230, 89%, 62%);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    }
+    
+    
+    
+     .play .scissors{
+        height: 130px;
+        width: 130px;
+       background: white;
+       border-radius: 100%;
+    border: solid 17px hsl(39, 89%, 49%);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    }   
+    
+     .play .rock{
+        height: 130px;
+        width: 130px;
+       background: white;
+       border-radius: 100%;
+    border: solid 17px hsl(349, 71%, 52%);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    }   
+    
+    .play img{
+        height: 55%;
+        width: 50%;
+    }
+
+    .play{
+        width: 80%;
+        height: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-image:  url(images/bg-triangle.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+        margin-top: 100px;
+    }
+    
+    .result{
+        width: 100%;
+        display: none;
+        margin-top: 50px;
+    }
+    
+    
+    
+    .result > div{
+        flex: 1;
+    }
+    
+    .result h1{
+        color: white;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    .result .handimagecontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     height: 300px;
     width: 300px;
     background: white;
     border-radius: 100%;
-    border: 37.5px;
-}
-
-.choices > div{
-    flex: 1;
-}
-
-.choices h1{
-    color: white;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.choices .handimagecontainer{
-display: flex;
-justify-content: center;
-}
-
-@media only screen and (max-width: 375px) {
-    .choices {
-      width: 100%;
-      justify-content: center;
-      flex-wrap: wrap;
+    border: 37.5px solid;
     }
-    .rules{
-        position: absolute;
+    
+    .status{
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+    }
+    
+    .status h1{
+        font-size: 50px;
+    }
+    
+    .again{
+        color: red;
+        letter-spacing: 2.5px;
+    border-radius: 5px;
+    height: 50px;
+    width: 220px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    }
+    
+    .rules{
+    color:  white;
+    letter-spacing: 2.5px;
+    border-radius: 5px;
+    height: 40px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border: solid white 2px;
+    margin: 50px;
+    position: absolute;
+    }
+    
+     .overlay{
+        background-color: rgba(0,0,0,0.7);
+        z-index: 1;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+    .popup-content{
+     height: 450px;
+     width: 400px;
+     color:  hsl(229, 25%, 31%);
+        background-color: white;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position:relative;
+        margin: 180px auto  auto;
+        border-radius: 10px;
+        z-index: 2;
         display: flex;
     }
-    .result{
-        width: 100%;
+    
+    .popup h1{
+        margin: 30px;
+        margin-right: 200px;
     }
+    
+    .popup img{
+        margin: 30px;
     }
+    
+
+}
