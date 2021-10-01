@@ -11,7 +11,6 @@ const chooseUserHand = (hand) => {
     result.style.display="flex";
 
     document.getElementById("userpickimage").src = "./images/icon-" + hand + ".svg";
-
     chooseComputerHand(hand);
 
 };
@@ -20,7 +19,7 @@ const chooseComputerHand = (hand) => {
     let play = ["rock", "paper", "scissors"];
     let computerhand = play[Math.floor(Math.random() * play.length)];
 
-    document.getElementById("housepickimage").src = "./images/icon-" + hand + ".svg";
+    document.getElementById("housepickimage").src = "./images/icon-" + computerhand + ".svg";
    
     status(hand, computerhand);
 };
