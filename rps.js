@@ -87,3 +87,4 @@ const restartGame = () =>{
     let overlay = document.querySelector(".overlay") ;
     overlay.style.display = "none";
  }
+
