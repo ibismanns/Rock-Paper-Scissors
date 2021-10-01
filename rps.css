@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.game{
+width: 100vw;
+height: 100vh;
+flex-direction: column;
+display: flex;
+align-items: center;
+}
+
+.header{
+    width: 700px;
+    border: solid hsl(217, 16%, 45%) 2px;
+    border-radius: 10px;
+    margin-top: 50px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+align-items: center;
+}
+
+.logo{
+    margin-left: 25px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.counter{
+    width: 150px;
+    height: 115px;
+    background: white;
+   border-radius: 7px;
+    margin-right: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter p{
+    color: hsl(229, 64%, 46%);
+    letter-spacing: 2px;
+    font-weight: 600;
+    line-height: 17px;
+    font-size: 19px;
+}
+
+.counter h1{
+    font-size: 60px;
+  color:   hsl(229, 25%, 31%);
+}
+
+.play .paper{
+     height: 200px;
+     width: 200px;
+    background: white;
+    border-radius: 100%;
+border: solid 25px hsl(230, 89%, 62%);
+justify-content: center;
+display: flex;
+align-items: center;
+margin-right: 40px;
+}
+
+
+
+ .play .scissors{
+    height: 200px;
+    width: 200px;
+   background: white;
+   border-radius: 100%;
+border: solid 25px hsl(39, 89%, 49%);
+justify-content: center;
+display: flex;
+align-items: center;
+margin-left: 40px;
+}   
+
+ .play .rock{
+    height: 200px;
+    width: 200px;
+   background: white;
+   border-radius: 100%;
+border: solid 25px hsl(349, 71%, 52%);
+justify-content: center;
+display: flex;
+align-items: center;
+margin: 5px;
+}   
+
+.play{
+    width: 500px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image:  url(images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+    margin-top: 50px;
+}
+
+.result{
+    width: 1000px;
+    display: none;
+    margin-top: 50px;
+}
+
+
+
+.result > div{
+    flex: 1;
+}
+
+.result h1{
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.result .handimagecontainer{
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+height: 300px;
+width: 300px;
+background: white;
+border-radius: 100%;
+border: 37.5px solid purple;
+}
+
+.status{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.status h1{
+    font-size: 50px;
+}
+
+.again{
+    color: red;
+    letter-spacing: 2.5px;
+border-radius: 5px;
+height: 50px;
+width: 220px;
+background-color: white;
+display: flex;
+flex-direction: column;
+text-align: center;
+justify-content: center;
+}
+
+.rules{
+color:  white;
+letter-spacing: 2.5px;
+border-radius: 5px;
+height: 40px;
+width: 130px;
+display: flex;
+flex-direction: column;
+text-align: center;
+justify-content: center;
+border: solid white 2px;
+margin: 50px;
+position: bottom right;
+}
+
+ .overlay{
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+.popup-content{
+ height: 450px;
+ width: 400px;
+ color:  hsl(229, 25%, 31%);
+    background-color: white;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    margin: 180px auto  auto;
+    border-radius: 10px;
+    z-index: 2;
+    display: flex;
+}
+
+.popup h1{
+    margin: 30px;
+    margin-right: 200px;
+}
+
+.popup img{
+    margin: 30px;
+}
+
+.choices{
+    width: 900px;
+    margin-top: 50px;
+}
+
+.userchoice{
+    display: none;
+}
+
+.housechoice{
+    display: none;
+}
+
+.choices img{
+    height: 300px;
+    width: 300px;
+    background: white;
+    border-radius: 100%;
+    border: 37.5px;
+}
+
+.choices > div{
+    flex: 1;
+}
+
+.choices h1{
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.choices .handimagecontainer{
+display: flex;
+justify-content: center;
+}
+

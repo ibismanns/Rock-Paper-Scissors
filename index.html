@@ -3,24 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
+<link rel="stylesheet" href="rps.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Rock, Paper, Scissors</title>
 
 </head>
 <body>
+<div class="game">
+  <div class="header">
+    <div class="logo">
+      <img src="images/logo.svg">
+    </div>
+    <div class="counter">
+   <p>SCORE</p>
+    <h1>0</h1>
+    </div>
+  </div>
+    <div class="play">
+      <div class="hand paper" onclick="chooseUserHand('paper')">
+        <img src="images/icon-paper.svg" height="80px" >
+      </div>
+      <div class="hand scissors" onclick="chooseUserHand('scissors')">
+        <img src="images/icon-scissors.svg" height="80px" >
+      </div>
+      <div class="hand rock" onclick="chooseUserHand('rock')">
+        <img src="images/icon-rock.svg" height="60px" >
+      </div>
+    </div>
 
-  Score
-  Rules
+    <div class="choices">
+<div class= "userchoice">
+  <h1> YOU PICKED</h1> 
+  <div class="handimagecontainer" id="userchoiceimage">
+    <img src="images/icon-paper.svg" >
+</div>
+    </div>
 
-  You Picked
-  The House Picked
+    <div class= "housechoice">
+      <h1> THE HOUSE PICKED</h1> 
+      <div class="handimagecontainer" id="housechoiceimage">
+        <img src="images/icon-paper.svg" >
+    </div>
+        </div>
+  </div>
 
-  You Win
-  You Lose
-
-  Play Again
+    <div class="result">
+      <div class="UserPick">
+       <h1> YOU PICKED</h1> 
+       <div class="handimagecontainer" id="userpickimage">
+         <img src="images/icon-paper.svg" >
+       </div>
+      </div>
+       <div class="status">
+         <div class="decision"><h1> YOU WIN</h1></div>
+          <div class="again" onclick="restartGame()">PLAY AGAIN</div>
+       </div>
+      <div class="housePick">
+        <h1>THE HOUSE PICKED</h1> 
+        <div class="handimagecontainer" id="housepickimage">
+          
+          <img src="images/icon-paper.svg" >
+       </div>
+    </div>
   
+  </div>
+<p class="rules" onclick="togglePopup()">RULES</p>
+ <div class="popup" id="popup-1">
+   <div class="overlay">
+     <div class="popup-content">
+   <h1>RULES</h1>
+   <img src="images/icon-close.svg" onclick="closePopup()" > 
+<img src="images/image-rules.svg">
+</div>
+ </div>
+</div>
+
+
 </body>
+<script src="rps.js"></script>
 </html>
